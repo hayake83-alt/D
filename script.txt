@@ -1,0 +1,45 @@
+const scenes = [...document.querySelectorAll(".scene")];
+const dots = [...document.querySelectorAll(".dot")];
+
+function showScene(id){
+  const target = document.getElementById(id);
+  const index = scenes.indexOf(target);
+
+  scenes.forEach(s => s.classList.remove("active"));
+  target.classList.add("active");
+
+  dots.forEach((d,i)=>d.classList.toggle("active", i===index));
+  window.scrollTo({top:0,behavior:"smooth"});
+
+  if(id==="scene-2"){
+    setTimeout(()=>{
+      document.getElementById("progress-line").style.height="100%";
+      document.querySelectorAll(".memory").forEach((m,i)=>{
+        setTimeout(()=>m.classList.add("visible"), i*450);
+      });
+    },250);
+  }
+}
+
+document.querySelectorAll("[data-next]").forEach(btn=>{
+  btn.addEventListener("click",()=>showScene(btn.dataset.next));
+});
+
+const capsuleBtn = document.getElementById("capsule-btn");
+const capsuleMessage = document.getElementById("capsule-message");
+const capsuleNext = document.getElementById("capsule-next");
+
+capsuleBtn.addEventListener("click",()=>{
+  capsuleMessage.classList.add("open");
+  capsuleBtn.textContent="Cápsula abierta";
+  capsuleBtn.disabled=true;
+  capsuleNext.classList.remove("hidden");
+});
+
+const lastBtn = document.getElementById("last-btn");
+const lastMessage = document.getElementById("last-message");
+
+lastBtn.addEventListener("click",()=>{
+  lastMessage.classList.add("open");
+  lastBtn.style.display="none";
+});

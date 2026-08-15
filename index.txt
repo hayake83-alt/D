@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Dani — Graduación</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main id="app">
+    <section class="scene active" id="scene-1">
+      <div class="card">
+        <span class="eyebrow">EXPEDIENTE PERSONAL · 15.08.2026</span>
+        <h1>Dani</h1>
+        <p class="lead">Hoy terminó una etapa.</p>
+        <p>Pero creo que es más bonito decir que hoy comenzó todo lo demás.</p>
+        <button class="primary" data-next="scene-2">Abrir expediente</button>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-2">
+      <div class="card wide">
+        <span class="eyebrow">MEMORIA AUTOBIOGRÁFICA</span>
+        <h2>Todo lo que tuviste que recorrer</h2>
+        <div class="timeline">
+          <div class="timeline-line"><span id="progress-line"></span></div>
+          <div class="memory">Los días en que estabas cansado y aun así continuaste.</div>
+          <div class="memory">Las cosas que aprendiste incluso cuando no estaban en los libros.</div>
+          <div class="memory">Las personas, los cambios y las versiones de ti que quedaron en el camino.</div>
+          <div class="memory">Las veces que dudaste… y aun así llegaste hasta aquí.</div>
+        </div>
+        <button class="primary" data-next="scene-3">Continuar</button>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-3">
+      <div class="card">
+        <span class="eyebrow">CONSTANCIA SIMBÓLICA</span>
+        <div class="diploma">
+          <div class="seal">Ψ</div>
+          <h2>Se certifica que</h2>
+          <h3>Dani</h3>
+          <p>ha sobrevivido oficialmente a esta etapa de su vida, con suficiente sensibilidad, paciencia y terquedad como para llegar al final.</p>
+          <p class="small">Área de formación: Psicología</p>
+          <p class="small">Resultado: APROBADO EN EXISTIR, CRECER Y SEGUIR ADELANTE.</p>
+        </div>
+        <button class="primary" data-next="scene-4">Guardar constancia</button>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-4">
+      <div class="card">
+        <span class="eyebrow">CÁPSULA DE EMERGENCIA EMOCIONAL</span>
+        <h2>Abrir cuando dudes de ti</h2>
+        <button id="capsule-btn" class="capsule">Abrir cápsula</button>
+        <div id="capsule-message" class="hidden-message">
+          <p>No sé cuántas veces vas a volver a preguntarte si eres suficiente.</p>
+          <p>Así que quiero dejarte esto guardado aquí: llegaste hasta este día por ti, por cada vez que seguiste aunque estabas cansado, aunque dudabas, aunque no sabías exactamente qué venía después.</p>
+          <p>Estoy orgullosa de ti. De lo que lograste, sí, pero sobre todo de la persona que tuvo que existir para lograrlo.</p>
+        </div>
+        <button class="primary hidden" id="capsule-next" data-next="scene-5">Seguir</button>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-5">
+      <div class="card wide">
+        <span class="eyebrow">PROYECCIÓN</span>
+        <h2>¿Y ahora?</h2>
+        <p class="big-pause">No lo sé.</p>
+        <p>Y esa es precisamente la parte bonita.</p>
+        <div class="future-grid">
+          <span>lugares que todavía no conoces</span>
+          <span>personas que aún no han llegado</span>
+          <span>pacientes que recordarán tus palabras</span>
+          <span>cosas de las que te enamorarás</span>
+          <span>versiones de ti que todavía no existen</span>
+          <span>días que hoy ni siquiera puedes imaginar</span>
+        </div>
+        <button class="primary" data-next="scene-6">Ver conclusión</button>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-6">
+      <div class="card">
+        <span class="eyebrow">IMPRESIÓN FINAL</span>
+        <h2>Diagnóstico simbólico</h2>
+        <div class="diagnosis">
+          <p><strong>Hallazgo principal:</strong> lo lograste.</p>
+          <p><strong>Pronóstico:</strong> una vida entera por delante.</p>
+          <p><strong>Recomendación:</strong> recordar este día cuando el futuro vuelva a parecer enorme.</p>
+        </div>
+        <button class="primary" data-next="scene-7">Última página</button>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-7">
+      <div class="card final-card">
+        <div class="floating-psi">Ψ</div>
+        <h2>Estoy orgullosa de ti.</h2>
+        <p>No solamente por haberte graduado, sino por la persona que llegó hasta aquí.</p>
+        <p class="congrats">Felicidades, Dani.</p>
+        <p class="done">Lo lograste.</p>
+        <button id="last-btn" class="secondary">Hay una última cosa</button>
+        <div id="last-message" class="hidden-message last">
+          <p>Donde sea que te lleve esta nueva etapa, quiero que exista al menos un rincón del mundo que siempre te recuerde esto:</p>
+          <p><strong>yo creo en ti.</strong></p>
+          <p>Y hoy, más que nunca, espero que tú también.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress-dots" aria-label="Progreso">
+    <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
