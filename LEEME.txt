@@ -1,0 +1,12 @@
+REGALO DE GRADUACIÓN PARA DANI
+
+1. Descarga los tres archivos.
+2. Renombra:
+   index.txt  -> index.html
+   style.txt  -> style.css
+   script.txt -> script.js
+3. Déjalos juntos en la misma carpeta.
+4. Abre index.html en el navegador para probarlo.
+5. Para publicarlo, sube los tres archivos a tu repositorio de GitHub Pages.
+
+Puedes cambiar cualquier texto directamente desde index.html.
